@@ -1,0 +1,83 @@
+{
+    "version": 8,
+    "name": "OS Greenspace",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template",
+        "mapbox:sdk-support": {
+            "android": "10.0.0",
+            "ios": "10.0.0",
+            "js": "2.3.0"
+        },
+        "mapbox:groups": {},
+        "mapbox:uiParadigm": "layers"
+    },
+    "center": [-0.2311228151819762, 51.402469254429604],
+    "zoom": 10.70923796201491,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {"url": "mapbox://cambrown11.94ne7c6g", "type": "vector"}
+    },
+    "sprite": "mapbox://sprites/cambrown11/ckvb05e3i296a14mtbmdcd7bp/ck2u8j60r58fu0sgyxrigm3cu",
+    "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "greenspace-site",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "greenspace_site",
+            "layout": {},
+            "paint": {
+                "fill-color": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    0,
+                    "hsla(102, 29%, 74%, 0.5)",
+                    6,
+                    "hsla(102, 55%, 48%, 0.5)",
+                    22,
+                    "hsla(101, 31%, 48%, 0.9)"
+                ]
+            }
+        },
+        {
+            "id": "access-point",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "access_point",
+            "layout": {},
+            "paint": {
+                "circle-color": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    1,
+                    "hsla(133, 62%, 18%, 0.1)",
+                    22,
+                    "hsl(133, 57%, 27%)"
+                ],
+                "circle-stroke-color": "hsl(0, 91%, 41%)",
+                "circle-radius": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    0,
+                    0.4,
+                    14,
+                    4,
+                    22,
+                    8
+                ]
+            }
+        }
+    ],
+    "created": "2021-10-28T13:48:33.850Z",
+    "modified": "2021-10-28T14:03:57.473Z",
+    "id": "ckvb05e3i296a14mtbmdcd7bp",
+    "owner": "cambrown11",
+    "visibility": "public",
+    "protected": false,
+    "draft": false
+}
